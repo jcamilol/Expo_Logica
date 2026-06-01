@@ -1,0 +1,56 @@
+\begin{frame}{Una equivalencia topológica}
+   \begin{itemize}
+      \item Llamamos $\mathcal{V}$ al conjunto de todas las valuaciones de $L$.
+      \item <2-> Para cada sentencia $P$ se define 
+         $$\mathcal{U}(P):=\left\lbrace \phi \in \mathcal{V}\mid \phi(P)=1 \right\rbrace$$
+      \item <3-> El conjunto $\mathcal{B}:=\left\lbrace \mathcal{U}(P)\mid P \text{ es una sentencia}\right\rbrace$ es base para una topología sobre $\mathcal{V}$
+   \end{itemize}
+   \onslide<4>{
+   \begin{Lema}
+      $\mathcal{E}$ es insatisfacible ssi $\left\lbrace \mathcal{U}(\neg P) \mid P\in \mathcal{E}\right\rbrace$ es un cubrimiento de $\mathcal{V}$\vspace{0.3cm} 
+   \end{Lema}
+   }
+\end{frame}
+\begin{frame}{Una equivalencia topológica}
+   \begin{Hecho}
+       Las siguientes afirmaciones son equivalentes:
+       \begin{itemize}
+          \item[(1)] $L$ satisface el teorema de compacidad
+          \item[(2)] El espacio de valuaciones $\mathcal{V}$ de $L$ es compacto
+       \vspace{0.3cm}
+       \end{itemize}
+   \end{Hecho}
+\end{frame}
+\begin{frame}{Una equivalencia topológica}
+   \begin{Hecho}
+       Las siguientes afirmaciones son equivalentes:
+       \begin{itemize}
+          \item[(1)] Si $\mathcal{E}$ es insatisfacible entonces $\mathcal{E}$ no es finitamente satisfacible.
+          \item[(2)] El espacio de valuaciones $\mathcal{V}$ de $L$ es compacto
+       \vspace{0.3cm}
+       \end{itemize}
+   \end{Hecho}
+\end{frame}
+\begin{frame}{Una equivalencia topológica}
+   \alert{$(1)\Rightarrow (2)$}
+   \begin{itemize}
+      \item Sea $\left\lbrace \mathcal{U}(P)\mid P\in \mathcal{E}\right\rbrace$ un cubrimiento abierto de $\mathcal{V}$.
+      \item <2-> $\left\lbrace \mathcal{U}(P)\mid P\in \mathcal{E}\right\rbrace=\left\lbrace \mathcal{U}(\neg P)\mid P\in \mathcal{E}'\right\rbrace$ con $\mathcal{E}'=\left\lbrace \neg P \mid P\in \mathcal{E}\right\rbrace$.
+      \item <3-> $\mathcal{E}'$ es insatisfacible.
+      \item <4-> Existe un subconjunto finito $\mathcal{E}^{'}_{fin}\subseteq \mathcal{E}'$ que es insatisfacible.
+      \item <5-> $\left\lbrace \mathcal{U}(\neg P)\mid P\in \mathcal{E}^{'}_{fin}\right\rbrace$ es un cubrimiento abierto de $\mathcal{V}$.
+      \item <6-> $\mathcal{V}$ es compacto.
+   \end{itemize}
+\end{frame}
+\begin{frame}
+   \alert{$(2)\Rightarrow (1)$}
+   \begin{itemize}
+      \item Supongamos que $\mathcal{E}$ es insatisfacible.
+      \item <2-> $\left\lbrace \mathcal{U}(\neg P)\mid P\in \mathcal{E}\right\rbrace$ es un cubrimiento abierto de $\mathcal{V}$.
+      \item <3-> Existe un subconjunto finito $\mathcal{E}_{fin}\subseteq \mathcal{E}$ tal que $\left\lbrace \mathcal{U}(\neg P)\mid P\in \mathcal{E}_{fin}\right\rbrace$ cubre a $\mathcal{V}$.
+      \item <4-> $\mathcal{E}_{fin}$ es insatisfacible.
+      \item <5-> $\mathcal{E}$ no es finitamente satisfacible.
+   \end{itemize}
+   \onslide<5>\hfill \qed
+\end{frame}
+
